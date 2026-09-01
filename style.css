@@ -1,0 +1,22 @@
+/* GENEREL STYLING */
+
+/* Typografi - henter fonter fra Google */
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+ /* Farver */
+:root {
+  --bige: #FFFBF0;
+  --gul: #FFD131;
+  --orange: #ff9505;
+  --roed: #bc3908;
+  --brun: #220901;
+  --overskrifter: 'chonburi', sans-serif;
+  --broedtekst: 'manrope', sans-serif;
+}
+
+body{
+    font-family: var(--broedtekst);
+    color: var(--roed);
+    background-color: var(--bige);
+}
