@@ -19,4 +19,62 @@ body{
     font-family: var(--broedtekst);
     color: var(--roed);
     background-color: var(--bige);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap; /* Smider elementerne under hinanden på små skærme */
+  min-height: 100vh;
+}
+
+/* PROFIL STYLING */
+/* PROFIL STYLING */
+.profil {
+  background-image: url('IMG/sommermig.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  min-width: 320px;
+  min-height: calc(100vh - 20px);
+  overflow: hidden;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.profil h2{
+    font-family: var(--overskrifter);
+    color: var(--gul);
+    font-size: 3rem;
+    margin-left: 5vw;
+    padding-top: 2vw;
+}
+
+.profil p{
+    color: var(--gul);
+    font-size: 1.5rem;
+    margin-left: 5vw;
+    margin-top: -25px;
+}
+
+
+/* CHAT STYLING */
+.chat {
+  flex: 1;
+  min-width: 320px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--roed);
+  min-height: calc(100vh - 20px);
+  background-image: 
+    linear-gradient(rgba(255, 251, 240, 0.6), rgba(255, 251, 240, 0.6)), 
+    url('IMG/logoPortfolioGul.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2vw;
+  background-origin: content-box;
+  background-size: contain;
 }
