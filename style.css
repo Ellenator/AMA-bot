@@ -15,6 +15,11 @@
   --broedtekst: 'manrope', sans-serif;
 }
 
+html, body {
+  height: 100vh;
+  overflow: hidden;
+}
+
 body{
     font-family: var(--broedtekst);
     color: var(--roed);
@@ -26,11 +31,12 @@ body{
 
 main {
   display: flex;
-  flex-wrap: wrap; /* Smider elementerne under hinanden på små skærme */
-  min-height: 100vh;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding: 10px;
+  gap: 10px;
 }
 
-/* PROFIL STYLING */
 /* PROFIL STYLING */
 .profil {
   background-image: url('IMG/sommermig.JPG');
@@ -39,25 +45,25 @@ main {
   background-repeat: no-repeat;
   flex: 1;
   min-width: 320px;
-  min-height: calc(100vh - 20px);
+  height: 97%;
   overflow: hidden;
-  margin: 10px;
   border-radius: 10px;
 }
 
 .profil h2{
     font-family: var(--overskrifter);
-    color: var(--gul);
-    font-size: 3rem;
+    color: var(--brun);
+    font-size: 4rem;
     margin-left: 5vw;
-    padding-top: 2vw;
+    padding-top: 1vh;
 }
 
 .profil p{
-    color: var(--gul);
+    color: var(--brun);
     font-size: 1.5rem;
-    margin-left: 5vw;
-    margin-top: -25px;
+    margin-left: 5.5vw;
+    margin-top: -60px;
+    font-weight: 500;
 }
 
 
@@ -65,16 +71,15 @@ main {
 .chat {
   flex: 1;
   min-width: 320px;
-  margin: 10px;
   border-radius: 10px;
   border: 2px solid var(--roed);
-  min-height: calc(100vh - 20px);
+  height: 87%; /* Ændret her */
   background-image: 
-    linear-gradient(rgba(255, 251, 240, 0.6), rgba(255, 251, 240, 0.6)), 
+    linear-gradient(rgba(255, 251, 240, 0.7), rgba(255, 251, 240, 0.7)), 
     url('IMG/logoPortfolioGul.png');
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2vw;
+  padding: 2.5vw;
   background-origin: content-box;
   background-size: contain;
 }
