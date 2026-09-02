@@ -83,3 +83,27 @@ main {
   background-origin: content-box;
   background-size: contain;
 }
+
+#questioninput{
+    border: 2px solid var(--roed);
+    border-radius: 10px;
+    height: 50px;
+    width: 85%;
+    font-family: var(--broedtekst);
+    font-size: 1rem;
+}
+
+button{
+    color: var(--bige);
+    background-color: var(--roed);
+    border: none;
+    border-radius: 10px;
+    height: 55px;
+    width: 12%;
+    font-family: var(--overskrifter);
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: var(--orange);
+}
