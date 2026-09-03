@@ -16,6 +16,7 @@
 }
 
 /* ---------------------NYT DESIGN----------------------*/
+/*
 body {
   background-image: url('IMG/sunflower-5228111_960_720.png');
   background-repeat: no-repeat;
@@ -23,10 +24,9 @@ body {
   background-position: bottom center;
   background-size: cover;
 }
-
+*/
 
 /* ---------------------GAMMMELT DESIGN------------------*/
-/*
 html, body {
   height: 100vh;
   overflow: hidden;
@@ -48,7 +48,6 @@ main {
   padding: 10px;
   gap: 10px;
 }
-*/
 
 /* PROFIL STYLING */
 .profil {
@@ -86,7 +85,7 @@ main {
   min-width: 320px;
   border-radius: 10px;
   border: 2px solid var(--roed);
-  height: 87%; /* Ændret her */
+  height: 87%;
   background-image: 
     linear-gradient(rgba(255, 251, 240, 0.7), rgba(255, 251, 240, 0.7)), 
     url('IMG/logoPortfolioGul.png');
@@ -104,6 +103,12 @@ main {
     width: 85%;
     font-family: var(--broedtekst);
     font-size: 1rem;
+}
+
+#questioninput::placeholder {
+  color: var(--roed);
+  opacity: 0.6;
+  padding-left: 10px;
 }
 
 button{
