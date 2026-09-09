@@ -1,0 +1,127 @@
+/* GENEREL STYLING */
+
+/* Typografi - henter fonter fra Google */
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+ /* Farver */
+:root {
+  --bige: #FFFBF0;
+  --gul: #FFD131;
+  --orange: #ff9505;
+  --roed: #bc3908;
+  --brun: #220901;
+  --overskrifter: 'chonburi', sans-serif;
+  --broedtekst: 'manrope', sans-serif;
+}
+
+/* ---------------------NYT DESIGN----------------------*/
+/*
+body {
+  background-image: url('IMG/sunflower-5228111_960_720.png');
+  background-repeat: no-repeat;
+  background-color: var(--bige);
+  background-position: bottom center;
+  background-size: cover;
+}
+*/
+
+/* ---------------------GAMMMELT DESIGN------------------*/
+html, body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body{
+    font-family: var(--broedtekst);
+    color: var(--roed);
+    background-color: var(--bige);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  padding: 10px;
+  gap: 10px;
+}
+
+/* PROFIL STYLING */
+.profil {
+  background-image: url('/public/IMG/sommermig.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  min-width: 320px;
+  height: 97%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.profil h2{
+    font-family: var(--overskrifter);
+    color: var(--brun);
+    font-size: 4rem;
+    margin-left: 5vw;
+    padding-top: 1vh;
+}
+
+.profil p{
+    color: var(--brun);
+    font-size: 1.5rem;
+    margin-left: 5.5vw;
+    margin-top: -60px;
+    font-weight: 500;
+}
+
+
+/* CHAT STYLING */
+.chat {
+  flex: 1;
+  min-width: 320px;
+  border-radius: 10px;
+  border: 2px solid var(--roed);
+  height: 87%;
+  background-image: 
+    linear-gradient(rgba(255, 251, 240, 0.7), rgba(255, 251, 240, 0.7)), 
+    url('/public/IMG/logoPortfolioGul.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2.5vw;
+  background-origin: content-box;
+  background-size: contain;
+}
+
+#questioninput{
+    border: 2px solid var(--roed);
+    border-radius: 10px;
+    height: 50px;
+    width: 85%;
+    font-family: var(--broedtekst);
+    font-size: 1rem;
+}
+
+#questioninput::placeholder {
+  color: var(--roed);
+  opacity: 0.6;
+  padding-left: 10px;
+}
+
+button{
+    color: var(--bige);
+    background-color: var(--roed);
+    border: none;
+    border-radius: 10px;
+    height: 55px;
+    width: 12%;
+    font-family: var(--overskrifter);
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: var(--orange);
+}
