@@ -51,7 +51,7 @@ main {
 
 /* PROFIL STYLING */
 .profil {
-  background-image: url('/public/IMG/sommermig.JPG');
+  background-image: url('/IMG/sommermig.JPG');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -88,7 +88,7 @@ main {
   height: 87%;
   background-image: 
     linear-gradient(rgba(255, 251, 240, 0.7), rgba(255, 251, 240, 0.7)), 
-    url('/public/IMG/logoPortfolioGul.png');
+    url('/IMG/logoPortfolioGul.png');
   background-position: center;
   background-repeat: no-repeat;
   padding: 2.5vw;
