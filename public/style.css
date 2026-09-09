@@ -154,8 +154,8 @@ button:hover {
   background-color: var(--gul);
   font-size: 1rem;
   font-family: var(--broedtekst);
-  padding: 10px;
-  border-radius: 10px 10px 10px 0px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px 20px 20px 0px;
   color: var(--bige);
   max-width: 80%;
   align-self: flex-start;
@@ -165,8 +165,8 @@ button:hover {
   background-color: var(--orange);
   font-size: 1rem;
   font-family: var(--broedtekst);
-  padding: 10px;
-  border-radius: 10px 10px 0px 10px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 20px 20px 0px 20px;
   color: var(--bige);
   max-width: 80%;
   align-self: flex-end;
