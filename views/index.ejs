@@ -24,10 +24,11 @@
         </section>
 
     <% for (const message of messages) { %>
-        <p><%= message %></p>
+        <article class="<%= message.type %>">
+            <p><%= message.text %></p>
+        </article>
     <% } %>
 
-        
     </main>
 </body>
 </html>

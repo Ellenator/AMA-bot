@@ -16,7 +16,8 @@ app.get("/", (req, res) => {
 app.post("/ask", (req, res) => {
     const question = req.body.question;
 
-    messages.push(question);
+    messages.push({ type: "question", text: question });
+    messages.push({ type: "answer", text: "Jeg leder efter et svar..." })
 
     res.render("index", { messages });
 });
