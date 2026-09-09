@@ -16,6 +16,14 @@
         </section>
 
         <section class="chat">
+            <div class="chat-messages">
+                <% for (const message of messages) { %>
+                    <article class="<%= message.type %>">
+                        <p><%= message.text %></p>
+                    </article>
+                <% } %>
+            </div>
+
             <form method="POST" action="/ask">
                 <label for="question" id="text">Lær mig bedre at kende her:</label>
                 <input type="text" id="question" name="question" placeholder="Spørg mig om noget..." autocomplete="off" />
@@ -23,12 +31,18 @@
             </form>
         </section>
 
-    <% for (const message of messages) { %>
-        <article class="<%= message.type %>">
-            <p><%= message.text %></p>
-        </article>
-    <% } %>
-
     </main>
+
+    <script>
+    // Finder det ALLERSIDSTE spørgsmål i chatten
+        const questions = document.querySelectorAll('.question');
+        const lastQuestion = questions[questions.length - 1];
+
+        if (lastQuestion) {
+    // Ruller så toppen af spørgsmålet flugter med toppen af chat-vinduet
+        lastQuestion.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    </script>
+
 </body>
 </html>

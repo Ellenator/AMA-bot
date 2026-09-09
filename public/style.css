@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
- /* Farver */
+/* Farver */
 :root {
   --bige: #FFFBF0;
   --gul: #FFD131;
@@ -15,30 +15,17 @@
   --broedtekst: 'manrope', sans-serif;
 }
 
-/* ---------------------NYT DESIGN----------------------*/
-/*
-body {
-  background-image: url('IMG/sunflower-5228111_960_720.png');
-  background-repeat: no-repeat;
-  background-color: var(--bige);
-  background-position: bottom center;
-  background-size: cover;
-}
-*/
-
-/* ---------------------GAMMMELT DESIGN------------------*/
 html, body {
   height: 100vh;
-  overflow: hidden;
 }
 
-body{
-    font-family: var(--broedtekst);
-    color: var(--roed);
-    background-color: var(--bige);
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  font-family: var(--broedtekst);
+  color: var(--roed);
+  background-color: var(--bige);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
@@ -62,22 +49,21 @@ main {
   border-radius: 10px;
 }
 
-.profil h2{
-    font-family: var(--overskrifter);
-    color: var(--brun);
-    font-size: 4rem;
-    margin-left: 5vw;
-    padding-top: 1vh;
+.profil h2 {
+  font-family: var(--overskrifter);
+  color: var(--brun);
+  font-size: 4rem;
+  margin-left: 5vw;
+  padding-top: 1vh;
 }
 
-.profil p{
-    color: var(--brun);
-    font-size: 1.5rem;
-    margin-left: 5.5vw;
-    margin-top: -60px;
-    font-weight: 500;
+.profil p {
+  color: var(--brun);
+  font-size: 1.5rem;
+  margin-left: 5.5vw;
+  margin-top: -60px;
+  font-weight: 500;
 }
-
 
 /* CHAT STYLING */
 .chat {
@@ -94,59 +80,98 @@ main {
   padding: 2.5vw;
   background-origin: content-box;
   background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-#question{
-    border: 2px solid var(--roed);
-    border-radius: 10px;
-    height: 50px;
-    width: 85%;
-    font-family: var(--broedtekst);
-    font-size: 1rem;
-    margin-top: 5px;
+/* Containeren der holder alle beskederne samlet */
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding-right: 5px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  scroll-behavior: smooth; 
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+/* INPUT FELT STYLING */
+#question {
+  border: 2px solid var(--roed);
+  border-radius: 10px;
+  height: 50px;
+  width: 85%;
+  font-family: var(--broedtekst);
+  font-size: 1rem;
+  margin-top: 5px;
+  background-color: var(--bige);
+  color: var(--roed);
+  padding-left: 12px;
+  box-sizing: border-box;
+  outline: none;
 }
 
 #question::placeholder {
   color: var(--roed);
   opacity: 0.4;
-  padding-left: 8px;
 }
 
-#text{
+#question:focus {
+  border-color: var(--roed);
+}
+
+#text {
   padding-left: 10px;
   font-size: 1rem;
 }
 
-button{
-    color: var(--bige);
-    background-color: var(--roed);
-    border: none;
-    border-radius: 10px;
-    height: 55px;
-    width: 12%;
-    font-family: var(--overskrifter);
-    font-size: 1rem;
+button {
+  color: var(--bige);
+  background-color: var(--roed);
+  border: none;
+  border-radius: 10px;
+  height: 55px;
+  width: 12%;
+  font-family: var(--overskrifter);
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-button:hover{
-    background-color: var(--orange);
+button:hover {
+  background-color: var(--orange);
 }
 
 /* SVAR OG SPØRGSMÅL STYLING */
-.question{
+.question {
   background-color: var(--gul);
   font-size: 1rem;
   font-family: var(--broedtekst);
   padding: 10px;
   border-radius: 10px 10px 10px 0px;
   color: var(--bige);
+  max-width: 80%;
+  align-self: flex-start;
 }
 
-.answer{
+.answer {
   background-color: var(--orange);
   font-size: 1rem;
   font-family: var(--broedtekst);
   padding: 10px;
   border-radius: 10px 10px 0px 10px;
   color: var(--bige);
+  max-width: 80%;
+  align-self: flex-end;
+}
+
+.question p, .answer p {
+  margin: 0;
 }
