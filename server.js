@@ -39,18 +39,22 @@ function findAnswer(question) {
 }
 
 app.get("/", (req, res) => {
-    res.render("index", { messages });
+    res.render("index", { messages, error: "" });
 });
 
-app.post("/ask", (req, res) => {
-    const question = req.body.question;
-    
-    messages.push({ type: "question", text: question });
+app.post("/ask", (request, response) => {
+  const question = request.body.question.trim();
+  let error = "";
 
+  if (!question) {
+    error = "Skriv et spørgsmål, før du sender.";
+  } else {
+    messages.push({ type: "question", text: question });
     const answer = findAnswer(question);
     messages.push({ type: "answer", text: answer });
+  }
 
-    res.render("index", { messages });
+  response.render("index", { messages, error });
 });
 
 app.listen(port, () => {

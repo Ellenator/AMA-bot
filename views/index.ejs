@@ -29,6 +29,11 @@
                 <input type="text" id="question" name="question" placeholder="Spørg mig om noget..." autocomplete="off" />
                 <button type="submit">Send</button>
             </form>
+
+            <% if (error) { %>
+                <p role="alert"><%= error %></p>
+            <% } %>
+
         </section>
 
     </main>
