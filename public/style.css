@@ -57,16 +57,17 @@ main {
 .profil h2 {
   font-family: var(--overskrifter);
   color: var(--brun);
-  font-size: 4rem;
+  font-size: 3rem;
+  max-width: 90%;
   margin-left: 5vw;
   padding-top: 1vh;
 }
 
 .profil p {
   color: var(--brun);
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-left: 5.5vw;
-  margin-top: -60px;
+  margin-top: -40px;
   font-weight: 500;
 }
 
@@ -110,15 +111,21 @@ main {
   display: none;
 }
 
-/* INPUT FELT STYLING */
+/* INPUT FELT OG FORM STYLING */
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
 #question {
+  flex: 1;
   border: 2px solid var(--roed);
   border-radius: 10px;
   height: 50px;
-  width: 85%;
   font-family: var(--broedtekst);
   font-size: 1rem;
-  margin-top: 5px;
   background-color: var(--bige);
   color: var(--roed);
   padding-left: 12px;
@@ -145,11 +152,19 @@ button {
   background-color: var(--roed);
   border: none;
   border-radius: 10px;
-  height: 55px;
-  width: 12%;
+  height: 50px;
+  padding: 10px 15px;
+  white-space: nowrap;
+  
+  /* Centrerer teksten perfekt i knappen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   font-family: var(--overskrifter);
   font-size: 1rem;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 button:hover {
@@ -198,4 +213,46 @@ p[role="alert"] {
   font-weight: 700;
   pointer-events: none;
   font-family: var(--broedtekst);
+}
+
+/* RESPONSIVT LAYOUT TIL MOBIL / SMÅ SKÆRME */
+@media (max-width: 900px) {
+  html, body {
+    overflow: hidden;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    height: 100vh;
+  }
+
+  .profil, .chat {
+    width: 100%;
+    min-width: unset;
+    height: calc(50vh - 15px);
+  }
+
+  /* Centrerer indholdet i profilkassen */
+  .profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Nulstiller margener så centreringen rammer præcist */
+  .profil h2 {
+    font-size: 2.5rem;
+    max-width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .profil p {
+    font-size: 80%;
+    margin-left: 0;
+    margin-top: -35px;
+  }
 }
