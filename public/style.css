@@ -17,6 +17,9 @@
 
 html, body {
   height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 body {
@@ -34,6 +37,7 @@ main {
   height: 100vh;
   padding: 10px;
   gap: 10px;
+  box-sizing: border-box;
 }
 
 /* PROFIL STYLING */
@@ -44,9 +48,10 @@ main {
   background-repeat: no-repeat;
   flex: 1;
   min-width: 320px;
-  height: 97%;
+  height: 100%;
   overflow: hidden;
   border-radius: 10px;
+  box-sizing: border-box;
 }
 
 .profil h2 {
@@ -71,7 +76,7 @@ main {
   min-width: 320px;
   border-radius: 10px;
   border: 2px solid var(--roed);
-  height: 87%;
+  height: 100%;
   background-image: 
     linear-gradient(rgba(255, 251, 240, 0.7), rgba(255, 251, 240, 0.7)), 
     url('/IMG/logoPortfolioGul.png');
@@ -83,6 +88,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+  position: relative;
 }
 
 /* Containeren der holder alle beskederne samlet */
