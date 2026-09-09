@@ -11,22 +11,34 @@ const messages = [];
 
 const answers = [
   {
+    category: "navn",
     keywords: ["navn", "hedder", "hvem er du"],
     answer: "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?"
   },
   {
+    category: "bosted",
     keywords: ["bor", "by", "fra"],
     answer: "Jeg bor inde i Aarhus by sammen med min kæreste Nick."
   },
   {
+    category: "hobbier",
     keywords: ["fritid", "hobby", "kan lide"],
     answer: "I min fritid kan jeg godt lide at styrketræne, løbe, lave mad, bage lækker kage og brød og meget andet"
   },
   {
+    category: "frygter",
     keywords: ["frygt", "fobi", "bange"],
     answer: "Jeg er mega bange for hajer, men besluttede som barn at jeg måtte kunne lære mig ud af frygten, for den er jo irrationel. Så jeg begyndte at læse og se enormt mange dokumentarer om hajer, hvilket blot har resulteret i at jeg nu er enormt facineret af og ved meget om dem,  men er stadig irrationelt bange for dem. Så man kan sige det ikke hjalp så meget!"
   }
 ];
+
+function countMatches(keywords, normalizedQuestion) {
+    const matches = keywords.filter((keyword) => 
+        normalizedQuestion.includes(keyword)
+    );
+
+    return matches.length
+}
 
 function findAnswer(question) {
   const normalizedQuestion = question.toLowerCase();
@@ -42,23 +54,59 @@ function findAnswer(question) {
   return "Det kender jeg desværre ikke svaret på endnu.";
 }
 
+function findBestAnswer(question) {
+  const normalizedQuestion = question.toLowerCase();
+  let bestScore = 0;
+  let bestAnswer = "Det kender jeg desværre ikke svaret på endnu.";
+  let bestCategory = "";
+
+  for (const answerGroup of answers) {
+    const tempScore = countMatches(answerGroup.keywords, normalizedQuestion);
+    if (tempScore > bestScore) {
+        bestScore = tempScore;
+        bestAnswer = answerGroup.answer;
+        bestCategory = answerGroup.category;
+    }
+  }
+  return {
+    answer: bestAnswer,
+    category: bestCategory
+  };
+}
+
+const topicStats = {
+    navn: 0,
+    bosted: 0,
+    hobbier: 0,
+    frygter: 0
+};
+
 app.get("/", (req, res) => {
-    res.render("index", { messages, error: "" });
+    res.render("index", { messages, error: "", topicStats });
 });
 
-app.post("/ask", (request, response) => {
-  const question = request.body.question.trim();
+app.post("/ask", (req, res) => {
+  const question = req.body.question.trim();
   let error = "";
 
   if (!question) {
     error = "*OBS! Skriv et spørgsmål, før du sender";
   } else {
     messages.push({ type: "question", text: question });
-    const answer = findAnswer(question);
-    messages.push({ type: "answer", text: answer });
+
+    const answer = findBestAnswer(question);
+    messages.push({ type: "answer", text: answer.answer });
+    
+    if (answer.category) {
+        topicStats[answer.category] = topicStats[answer.category] + 1;
+    }  
   }
 
-  response.render("index", { messages, error });
+res.render("index", { messages, error, topicStats });
+  
+
+  console.log(topicStats);
+
 });
 
 app.listen(port, () => {
