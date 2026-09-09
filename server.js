@@ -47,7 +47,7 @@ app.post("/ask", (request, response) => {
   let error = "";
 
   if (!question) {
-    error = "Skriv et spørgsmål, før du sender.";
+    error = "*OBS! Skriv et spørgsmål, før du sender";
   } else {
     messages.push({ type: "question", text: question });
     const answer = findAnswer(question);

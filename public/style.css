@@ -175,3 +175,20 @@ button:hover {
 .question p, .answer p {
   margin: 0;
 }
+
+/* FEJLBESKED STYLING */
+.chat {
+  position: relative;
+}
+
+p[role="alert"] {
+  position: absolute;
+  bottom: 12px;
+  left: 50px;
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--roed);
+  font-weight: 700;
+  pointer-events: none;
+  font-family: var(--broedtekst);
+}
