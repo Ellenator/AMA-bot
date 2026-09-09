@@ -103,10 +103,6 @@ app.post("/ask", (req, res) => {
   }
 
 res.render("index", { messages, error, topicStats });
-  
-
-  console.log(topicStats);
-
 });
 
 app.listen(port, () => {
