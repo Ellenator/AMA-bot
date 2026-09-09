@@ -21,6 +21,10 @@ const answers = [
   {
     keywords: ["fritid", "hobby", "kan lide"],
     answer: "I min fritid kan jeg godt lide at styrketræne, løbe, lave mad, bage lækker kage og brød og meget andet"
+  },
+  {
+    keywords: ["frygt", "fobi", "bange"],
+    answer: "Jeg er mega bange for hajer, men besluttede som barn at jeg måtte kunne lære mig ud af frygten, for den er jo irrationel. Så jeg begyndte at læse og se enormt mange dokumentarer om hajer, hvilket blot har resulteret i at jeg nu er enormt facineret af og ved meget om dem,  men er stadig irrationelt bange for dem. Så man kan sige det ikke hjalp så meget!"
   }
 ];
 
