@@ -96,19 +96,25 @@ main {
   background-size: contain;
 }
 
-#questioninput{
+#question{
     border: 2px solid var(--roed);
     border-radius: 10px;
     height: 50px;
     width: 85%;
     font-family: var(--broedtekst);
     font-size: 1rem;
+    margin-top: 5px;
 }
 
-#questioninput::placeholder {
+#question::placeholder {
   color: var(--roed);
-  opacity: 0.6;
+  opacity: 0.4;
+  padding-left: 8px;
+}
+
+#text{
   padding-left: 10px;
+  font-size: 1rem;
 }
 
 button{

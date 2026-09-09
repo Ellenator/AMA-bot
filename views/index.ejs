@@ -16,16 +16,10 @@
         </section>
 
         <section class="chat">
-            <form>
-                <input
-                type="text"
-                id="questioninput"
-                placeholder="Spørg mig om noget"
-                autocomplete="off"
-                />
-                <button type="submit">
-                    Send
-                </button>
+            <form method="POST" action="/ask">
+                <label for="question" id="text">Lær mig bedre at kende her:</label>
+                <input type="text" id="question" name="question" placeholder="Spørg mig om noget..." autocomplete="off" />
+                <button type="submit">Send</button>
             </form>
         </section>
 
