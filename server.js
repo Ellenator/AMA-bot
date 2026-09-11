@@ -1,4 +1,5 @@
 import express from "express";
+import { readFile } from "node:fs";
 import fs from "node:fs/promises";
 
 const app = express();
@@ -8,7 +9,15 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
-const messages = [];
+async function loadMessages() {
+  const data = await fs.readFile(".data/messages.json", "utf8");
+  return JSON.parse(data);
+}
+
+async function saveMessages(messages) {
+  const json = JSON.stringify(messages, null, 2);
+  await fs.writeFile(".data/messages.json", json);
+}
 
 const answers = [
   {
