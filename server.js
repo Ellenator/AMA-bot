@@ -97,7 +97,9 @@ app.get("/", async (req, res) => {
     res.render("index", { messages, error: "", topicStats });
 });
 
-app.post("/ask", (req, res) => {
+app.post("/ask", async (req, res) => {
+  const messages = await loadMessages();
+
   const question = req.body.question.trim();
   let error = "";
 
@@ -113,6 +115,8 @@ app.post("/ask", (req, res) => {
         topicStats[answer.category] = topicStats[answer.category] + 1;
     }  
   }
+
+await saveMessages(messages);
 
 res.render("index", { messages, error, topicStats });
 });
