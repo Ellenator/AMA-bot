@@ -10,13 +10,13 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 async function loadMessages() {
-  const data = await fs.readFile(".data/messages.json", "utf8");
+  const data = await fs.readFile("./data/messages.json", "utf8");
   return JSON.parse(data);
 }
 
 async function saveMessages(messages) {
   const json = JSON.stringify(messages, null, 2);
-  await fs.writeFile(".data/messages.json", json);
+  await fs.writeFile("./data/messages.json", json);
 }
 
 const answers = [
@@ -91,7 +91,9 @@ const topicStats = {
     frygter: 0
 };
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+    const messages = await loadMessages();
+
     res.render("index", { messages, error: "", topicStats });
 });
 
