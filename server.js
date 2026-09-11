@@ -1,4 +1,5 @@
 import express from "express";
+import fs from "node:fs/promises";
 
 const app = express();
 const port = 3000;
@@ -65,7 +66,7 @@ function findBestAnswer(question) {
     if (tempScore > bestScore) {
         bestScore = tempScore;
         bestAnswer = answerGroup.answer;
-        bestCategory = answerGroup.category;
+        bestCategory = answerGroup.category; 
     }
   }
   return {
