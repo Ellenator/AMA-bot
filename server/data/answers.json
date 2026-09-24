@@ -1,22 +1,38 @@
 [
   {
     "category": "navn",
-    "keywords": ["navn", "hedder", "hvem er du"],
+    "keywords": [
+      "navn",
+      "hedder",
+      "hvem er du"
+    ],
     "answer": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?"
   },
   {
     "category": "bosted",
-    "keywords": ["bor", "by", "fra"],
+    "keywords": [
+      "bor",
+      "by",
+      "fra"
+    ],
     "answer": "Jeg bor inde i Aarhus by sammen med min kæreste Nick."
   },
   {
     "category": "hobbier",
-    "keywords": ["fritid", "hobby", "kan lide"],
+    "keywords": [
+      "fritid",
+      "hobby",
+      "kan lide"
+    ],
     "answer": "I min fritid kan jeg godt lide at styrketræne, løbe, lave mad, bage lækker kage og brød og meget andet"
   },
   {
     "category": "frygter",
-    "keywords": ["frygt", "fobi", "bange"],
+    "keywords": [
+      "frygt",
+      "fobi",
+      "bange"
+    ],
     "answer": "Jeg er mega bange for hajer, men besluttede som barn at jeg måtte kunne lære mig ud af frygten, for den er jo irrationel. Så jeg begyndte at læse og se enormt mange dokumentarer om hajer, hvilket blot har resulteret i at jeg nu er enormt facineret af og ved meget om dem,  men er stadig irrationelt bange for dem. Så man kan sige det ikke hjalp så meget!"
   }
 ]

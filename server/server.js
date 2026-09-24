@@ -7,6 +7,7 @@ const port = 3000;
 
 app.use(express.json());
 
+//AMA bot spørgsmål
 async function loadMessages() {
   const data = await fs.readFile("./data/messages.json", "utf8");
   return JSON.parse(data);
@@ -15,6 +16,17 @@ async function loadMessages() {
 async function saveMessages(messages) {
   const json = JSON.stringify(messages, null, 2);
   await fs.writeFile("./data/messages.json", json);
+}
+
+//AMA bot svar
+async function loadAnswers() {
+  const data = await fs.readFile("./data/answers.json", "utf8");
+  return JSON.parse(data);
+}
+
+async function saveAnswers(answers) {
+  const json = JSON.stringify(answers, null, 2);
+  await fs.writeFile("./data/answers.json", json);
 }
 
 function countMatches(keywords, normalizedQuestion) {
@@ -39,7 +51,7 @@ function findAnswer(question) {
   return "Det kender jeg desværre ikke svaret på endnu.";
 }
 
-function findBestAnswer(question) {
+function findBestAnswer(question, answers) {
   const normalizedQuestion = question.toLowerCase();
 
   let bestScore = 0;
@@ -67,7 +79,7 @@ const topicStats = {
     frygter: 0
 };
 
-//routes
+//routes messages
 app.get("/messages", async (req, res) => {
   const messages = await loadMessages();
 
@@ -86,7 +98,8 @@ app.post("/messages", async (req, res) => {
   const message = { type: "question", text: question, createdAt: new Date().toISOString() };
   messages.push(message);
 
-  const result = findBestAnswer(question);
+  const answers = await loadAnswers();
+  const result = findBestAnswer(question, answers);
   const answerMessage = { type: "answer", text: result.answer, createdAt: new Date().toISOString() };
   messages.push(answerMessage);
 
@@ -97,6 +110,54 @@ app.post("/messages", async (req, res) => {
 
 app.delete("/messages", async (req, res) => {
   await saveMessages([]);
+
+  res.send();
+});
+
+//routes answers
+app.get("/answers", async (req, res) => {
+  const answers = await loadAnswers();
+
+  res.json(answers);
+});
+
+app.get("/answers/:category", async (req, res) => {
+  const answers = await loadAnswers();
+  const answerRule = answers.find((a) => a.category === req.params.category);
+
+  res.json(answerRule);
+});
+
+app.post("/answers", async (req, res) => {
+  const answers = await loadAnswers();
+  const newAnswerRule = {
+    category: req.body.category,
+    keywords: req.body.keywords,
+    answer: req.body.answer
+  };
+
+  answers.push(newAnswerRule);
+  await saveAnswers(answers);
+
+  res.json(newAnswerRule);
+});
+
+app.put("/answers/:category", async (req, res) => {
+  const answers = await loadAnswers();
+  const answerRule = answers.find((a) => a.category === req.params.category);
+
+  answerRule.keywords = req.body.keywords;
+  answerRule.answer = req.body.answer;
+  await saveAnswers(answers);
+
+  res.json(answerRule);
+});
+
+app.delete("/answers/:category", async (req, res) => {
+  const answers = await loadAnswers();
+  const updatedAnswers = answers.filter((a) => a.category !== req.params.category);
+
+  await saveAnswers(updatedAnswers);
 
   res.send();
 });
