@@ -38,5 +38,71 @@
   {
     "type": "answer",
     "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?"
+  },
+  {
+    "type": "question",
+    "text": {
+      "type": "question",
+      "text": "hvad er det nu du hedder?"
+    },
+    "createdAt": "2026-09-24T17:03:34.139Z"
+  },
+  {
+    "type": "question",
+    "text": {
+      "type": "question",
+      "text": "hvad er det nu du hedder?"
+    },
+    "createdAt": "2026-09-24T17:05:57.821Z"
+  },
+  {
+    "type": "question",
+    "text": {
+      "type": "question",
+      "text": "hvad er det nu du hedder?"
+    },
+    "createdAt": "2026-09-24T17:11:10.393Z"
+  },
+  {
+    "type": "question",
+    "text": {
+      "type": "question",
+      "text": "hvad er det nu du hedder bonita?"
+    },
+    "createdAt": "2026-09-24T17:13:13.129Z"
+  },
+  {
+    "type": "question",
+    "text": {
+      "text": "hvad er det nu du hedder bonita?"
+    },
+    "createdAt": "2026-09-24T17:13:41.500Z"
+  },
+  {
+    "type": "question",
+    "text": {
+      "text": "hvad er det nu du hedder bonita?"
+    },
+    "createdAt": "2026-09-24T17:14:14.832Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvor bor du bonita?",
+    "createdAt": "2026-09-24T17:39:53.664Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick.",
+    "createdAt": "2026-09-24T17:39:53.664Z"
+  },
+  {
+    "type": "question",
+    "text": "Er du bonita?",
+    "createdAt": "2026-09-24T17:44:09.200Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "createdAt": "2026-09-24T17:44:09.200Z"
   }
 ]

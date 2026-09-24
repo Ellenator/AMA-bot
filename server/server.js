@@ -40,6 +40,7 @@ const answers = [
   }
 ];
 
+
 function countMatches(keywords, normalizedQuestion) {
     const matches = keywords.filter((keyword) => 
         normalizedQuestion.includes(keyword)
@@ -64,6 +65,7 @@ function findAnswer(question) {
 
 function findBestAnswer(question) {
   const normalizedQuestion = question.toLowerCase();
+
   let bestScore = 0;
   let bestAnswer = "Det kender jeg desværre ikke svaret på endnu.";
   let bestCategory = "";
@@ -88,6 +90,35 @@ const topicStats = {
     hobbier: 0,
     frygter: 0
 };
+
+//routes
+app.get("/messages", async (req, res) => {
+  const messages = await loadMessages();
+
+  res.json(messages);
+});
+
+app.post("/messages", async (req, res) => {
+  const messages = await loadMessages();
+  const question = req.body.question.trim();
+
+  if (!question) {
+    res.json({ error: "Skriv et spørgsmål, før du sender." });
+    return;
+  }
+
+  const message = { type: "question", text: question, createdAt: new Date().toISOString() };
+  messages.push(message);
+
+  const result = findBestAnswer(question);
+  const answerMessage = { type: "answer", text: result.answer, createdAt: new Date().toISOString() };
+  messages.push(answerMessage);
+
+  await saveMessages(messages);
+
+  res.json({ question: message, answer: answerMessage });
+});
+
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
