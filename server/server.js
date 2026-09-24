@@ -89,36 +89,6 @@ const topicStats = {
     frygter: 0
 };
 
-app.get("/", async (req, res) => {
-    const messages = await loadMessages();
-
-    res.render("index", { messages, error: "", topicStats });
-});
-
-app.post("/ask", async (req, res) => {
-  const messages = await loadMessages();
-
-  const question = req.body.question.trim();
-  let error = "";
-
-  if (!question) {
-    error = "*OBS! Skriv et spørgsmål, før du sender";
-  } else {
-    messages.push({ type: "question", text: question });
-
-    const answer = findBestAnswer(question);
-    messages.push({ type: "answer", text: answer.answer });
-    
-    if (answer.category) {
-        topicStats[answer.category] = topicStats[answer.category] + 1;
-    }  
-  }
-
-await saveMessages(messages);
-
-res.render("index", { messages, error, topicStats });
-});
-
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
