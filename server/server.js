@@ -119,6 +119,11 @@ app.post("/messages", async (req, res) => {
   res.json({ question: message, answer: answerMessage });
 });
 
+app.delete("/messages", async (req, res) => {
+  await saveMessages([]);
+
+  res.send();
+});
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
