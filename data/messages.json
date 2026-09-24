@@ -22,5 +22,21 @@
   {
     "type": "answer",
     "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick."
+  },
+  {
+    "type": "question",
+    "text": "hej, hvem er du?"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?"
+  },
+  {
+    "type": "question",
+    "text": "hej, hvem er du?"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?"
   }
 ]
