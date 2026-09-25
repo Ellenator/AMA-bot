@@ -1,22 +1,14 @@
 import express from "express";
 import { readFile } from "node:fs";
 import fs from "node:fs/promises";
+import messagesRouter from "../server/routes/messages.js";
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 
-//AMA bot spørgsmål
-async function loadMessages() {
-  const data = await fs.readFile("./data/messages.json", "utf8");
-  return JSON.parse(data);
-}
-
-async function saveMessages(messages) {
-  const json = JSON.stringify(messages, null, 2);
-  await fs.writeFile("./data/messages.json", json);
-}
+app.use("/messages", messagesRouter);
 
 //AMA bot svar
 async function loadAnswers() {
@@ -78,41 +70,6 @@ const topicStats = {
     hobbier: 0,
     frygter: 0
 };
-
-//routes messages
-app.get("/messages", async (req, res) => {
-  const messages = await loadMessages();
-
-  res.json(messages);
-});
-
-app.post("/messages", async (req, res) => {
-  const messages = await loadMessages();
-  const question = req.body.question.trim();
-
-  if (!question) {
-    res.json({ error: "Skriv et spørgsmål, før du sender." });
-    return;
-  }
-
-  const message = { type: "question", text: question, createdAt: new Date().toISOString() };
-  messages.push(message);
-
-  const answers = await loadAnswers();
-  const result = findBestAnswer(question, answers);
-  const answerMessage = { type: "answer", text: result.answer, createdAt: new Date().toISOString() };
-  messages.push(answerMessage);
-
-  await saveMessages(messages);
-
-  res.json({ question: message, answer: answerMessage });
-});
-
-app.delete("/messages", async (req, res) => {
-  await saveMessages([]);
-
-  res.send();
-});
 
 //routes answers
 app.get("/answers", async (req, res) => {
