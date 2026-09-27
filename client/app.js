@@ -5,11 +5,13 @@ const clearMessagesButton = document.querySelector("#clear-messages-button");
 const API_URL = "http://localhost:3000";
 
 function displayMessage(message) {
-    const html = /*html*/ `
-        <article class="${message.type}">
-        <p>${message.text}</p>
-        </article>`;
-    messagesContainer.insertAdjacentHTML("beforeend", html);
+  const html = /*html*/ `
+    <article class="${message.type}">
+      <p>${message.text}</p>
+    </article>`;
+
+  messagesContainer.insertAdjacentHTML("beforeend", html);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
 async function getMessages() {
