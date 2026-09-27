@@ -23,3 +23,20 @@ async function getMessages() {
 }
 
 getMessages();
+
+questionForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const question = questionInput.value.trim();
+
+  const response = await fetch(`${API_URL}/messages`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ question })
+});
+
+data = await response.json();
+
+console.log(data);
+
+});

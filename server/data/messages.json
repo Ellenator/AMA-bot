@@ -1,1 +1,35 @@
-[]
+[
+  {
+    "type": "question",
+    "text": "Hvad hedder du?",
+    "createdAt": "2026-09-27T16:06:00.244Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:06:00.244Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad hedder du?",
+    "createdAt": "2026-09-27T16:06:04.227Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:06:04.227Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad hedder du bonita?",
+    "createdAt": "2026-09-27T16:10:19.535Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:10:19.535Z"
+  }
+]

@@ -12,8 +12,7 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-
- if (!req.body.text || !req.body.text.trim()) {
+  if (!req.body.question || !req.body.question.trim()) {
     res.json({ error: "Skriv et spørgsmål, før du sender." });
     return;
   }
@@ -23,7 +22,7 @@ router.post("/", async (req, res) => {
 
   const userMessage = {
     type: req.body.type || "question",
-    text: req.body.text.trim(),
+    text: req.body.question.trim(),
     createdAt: new Date().toISOString()
   };
 
