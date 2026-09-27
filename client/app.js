@@ -40,3 +40,8 @@ questionForm.addEventListener("submit", async (event) => {
 
     questionInput.value = "";
 });
+
+clearMessagesButton.addEventListener("click", async () => {
+  await fetch(`${API_URL}/messages`, { method: "DELETE" });
+  messagesContainer.innerHTML = ""
+});
