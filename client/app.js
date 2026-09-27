@@ -17,7 +17,9 @@ async function getMessages() {
     const response = await fetch(`${API_URL}/messages`);
     const messages = await response.json();
 
-    console.log(messages);
+    for (const message of messages) {
+        displayMessage(message);
+    }
 }
 
 getMessages();
