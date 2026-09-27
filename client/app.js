@@ -5,18 +5,16 @@ const clearMessagesButton = document.querySelector("#clear-messages-button");
 const API_URL = "http://localhost:3000";
 
 function displayMessage(message) {
-  const html = /*html*/ `
-    <article class="${message.type}">
-      <p>${message.text}</p>
-    </article>`;
-
+    const html = /*html*/ `
+        <article class="${message.type}">
+        <p>${message.text}</p>
+        </article>`;
     messagesContainer.insertAdjacentHTML("beforeend", html);
 }
 
 async function getMessages() {
     const response = await fetch(`${API_URL}/messages`);
     const messages = await response.json();
-
     for (const message of messages) {
         displayMessage(message);
     }
@@ -25,18 +23,18 @@ async function getMessages() {
 getMessages();
 
 questionForm.addEventListener("submit", async (event) => {
-  event.preventDefault();
+    event.preventDefault();
 
-  const question = questionInput.value.trim();
+    const question = questionInput.value.trim();
 
-  const response = await fetch(`${API_URL}/messages`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question })
-});
+    const response = await fetch(`${API_URL}/messages`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question })
+    });
 
-data = await response.json();
+    const data = await response.json();
 
-console.log(data);
-
+    displayMessage(data.userMessage);
+    displayMessage(data.botMessage);
 });

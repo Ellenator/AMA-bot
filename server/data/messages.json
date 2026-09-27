@@ -31,5 +31,533 @@
     "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
     "category": "navn",
     "createdAt": "2026-09-27T16:10:19.535Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad er du bange for bonita?",
+    "createdAt": "2026-09-27T16:14:07.721Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg er mega bange for hajer, men besluttede som barn at jeg måtte kunne lære mig ud af frygten, for den er jo irrationel. Så jeg begyndte at læse og se enormt mange dokumentarer om hajer, hvilket blot har resulteret i at jeg nu er enormt facineret af og ved meget om dem,  men er stadig irrationelt bange for dem. Så man kan sige det ikke hjalp så meget!",
+    "category": "frygter",
+    "createdAt": "2026-09-27T16:14:07.721Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad er du bange for bonita?",
+    "createdAt": "2026-09-27T16:22:51.309Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg er mega bange for hajer, men besluttede som barn at jeg måtte kunne lære mig ud af frygten, for den er jo irrationel. Så jeg begyndte at læse og se enormt mange dokumentarer om hajer, hvilket blot har resulteret i at jeg nu er enormt facineret af og ved meget om dem,  men er stadig irrationelt bange for dem. Så man kan sige det ikke hjalp så meget!",
+    "category": "frygter",
+    "createdAt": "2026-09-27T16:22:51.309Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad er du bange for bonita?",
+    "createdAt": "2026-09-27T16:23:20.993Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg er mega bange for hajer, men besluttede som barn at jeg måtte kunne lære mig ud af frygten, for den er jo irrationel. Så jeg begyndte at læse og se enormt mange dokumentarer om hajer, hvilket blot har resulteret i at jeg nu er enormt facineret af og ved meget om dem,  men er stadig irrationelt bange for dem. Så man kan sige det ikke hjalp så meget!",
+    "category": "frygter",
+    "createdAt": "2026-09-27T16:23:20.993Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvor bor du?",
+    "createdAt": "2026-09-27T16:23:30.766Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick.",
+    "category": "bosted",
+    "createdAt": "2026-09-27T16:23:30.766Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad gedde4ndu?",
+    "createdAt": "2026-09-27T16:27:17.553Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:27:17.553Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad hedder du?",
+    "createdAt": "2026-09-27T16:27:33.070Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:27:33.070Z"
+  },
+  {
+    "type": "question",
+    "text": "hvad hedder du?",
+    "createdAt": "2026-09-27T16:29:12.660Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:29:12.660Z"
+  },
+  {
+    "type": "question",
+    "text": "cdv",
+    "createdAt": "2026-09-27T16:29:38.058Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:29:38.058Z"
+  },
+  {
+    "type": "question",
+    "text": "cdv",
+    "createdAt": "2026-09-27T16:30:50.770Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:30:50.771Z"
+  },
+  {
+    "type": "question",
+    "text": "cdv",
+    "createdAt": "2026-09-27T16:30:53.134Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:30:53.134Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:31:16.739Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:31:16.739Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:33:34.192Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:33:34.192Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:34:29.548Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:34:29.550Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:34:30.773Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:34:30.774Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:37:22.435Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:37:22.475Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:43:26.007Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:43:26.007Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:43:33.031Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:43:33.031Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:45:57.557Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:45:57.557Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad heddrr du?",
+    "createdAt": "2026-09-27T16:45:58.689Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:45:58.689Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad hedder du?",
+    "createdAt": "2026-09-27T16:46:52.806Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:46:52.806Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad hedder du?",
+    "createdAt": "2026-09-27T16:48:57.103Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:48:57.103Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad hedder du`?",
+    "createdAt": "2026-09-27T16:49:30.551Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T16:49:30.551Z"
+  },
+  {
+    "type": "question",
+    "text": "feff",
+    "createdAt": "2026-09-27T16:49:49.955Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:49:49.955Z"
+  },
+  {
+    "type": "question",
+    "text": "fgf",
+    "createdAt": "2026-09-27T16:51:26.678Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:51:26.678Z"
+  },
+  {
+    "type": "question",
+    "text": "HEJ",
+    "createdAt": "2026-09-27T16:58:37.182Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T16:58:37.182Z"
+  },
+  {
+    "type": "question",
+    "text": "HEJ",
+    "createdAt": "2026-09-27T17:00:10.763Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:00:10.763Z"
+  },
+  {
+    "type": "question",
+    "text": "hEJ",
+    "createdAt": "2026-09-27T17:04:46.398Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:04:46.399Z"
+  },
+  {
+    "type": "question",
+    "text": "hEJ",
+    "createdAt": "2026-09-27T17:05:00.719Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:05:00.719Z"
+  },
+  {
+    "type": "question",
+    "text": "hEJ",
+    "createdAt": "2026-09-27T17:05:45.255Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:05:45.255Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:06:53.906Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:06:53.906Z"
+  },
+  {
+    "type": "question",
+    "text": "Hej",
+    "createdAt": "2026-09-27T17:08:14.672Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:08:14.672Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:09:14.500Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:09:14.500Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:11:39.911Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:11:39.911Z"
+  },
+  {
+    "type": "question",
+    "text": "Hej",
+    "createdAt": "2026-09-27T17:11:52.663Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:11:52.664Z"
+  },
+  {
+    "type": "question",
+    "text": "Hej",
+    "createdAt": "2026-09-27T17:12:08.788Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:12:08.788Z"
+  },
+  {
+    "type": "question",
+    "text": "ds",
+    "createdAt": "2026-09-27T17:12:37.342Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:12:37.342Z"
+  },
+  {
+    "type": "question",
+    "text": "df",
+    "createdAt": "2026-09-27T17:13:08.308Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:13:08.308Z"
+  },
+  {
+    "type": "question",
+    "text": "df",
+    "createdAt": "2026-09-27T17:13:18.667Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:13:18.667Z"
+  },
+  {
+    "type": "question",
+    "text": "df",
+    "createdAt": "2026-09-27T17:13:58.804Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:13:58.804Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:15:19.857Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:15:19.857Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:16:09.447Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:16:09.447Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:16:14.260Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:16:14.260Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:17:24.798Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:17:24.798Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-27T17:17:31.190Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:17:31.190Z"
+  },
+  {
+    "type": "question",
+    "text": "hejf",
+    "createdAt": "2026-09-27T17:17:35.922Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:17:35.922Z"
+  },
+  {
+    "type": "question",
+    "text": "hejf",
+    "createdAt": "2026-09-27T17:17:50.482Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:17:50.482Z"
+  },
+  {
+    "type": "question",
+    "text": "hejf",
+    "createdAt": "2026-09-27T17:17:52.454Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T17:17:52.454Z"
+  },
+  {
+    "type": "question",
+    "text": "hvor bor du pølse?",
+    "createdAt": "2026-09-27T18:41:16.494Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick.",
+    "category": "bosted",
+    "createdAt": "2026-09-27T18:41:16.494Z"
   }
 ]

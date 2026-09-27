@@ -26,10 +26,10 @@ router.post("/", async (req, res) => {
     createdAt: new Date().toISOString()
   };
 
-  
   messages.push(userMessage);
   
   const bestAnswerObj = findBestAnswer(userMessage.text, answers);
+
   const botMessage = {
     type: "answer",
     text: bestAnswerObj.answer,
@@ -38,9 +38,7 @@ router.post("/", async (req, res) => {
   };
   messages.push(botMessage);
   await saveMessages(messages);
-
-
-
+  
   res.json({ userMessage, botMessage });
 });
 
