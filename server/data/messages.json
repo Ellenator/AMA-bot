@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "type": "question",
+    "text": "hvem er du?",
+    "createdAt": "2026-09-27T19:03:32.508Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T19:03:32.508Z"
+  },
+  {
+    "type": "question",
+    "text": "hvad hedder du?",
+    "createdAt": "2026-09-27T19:03:37.791Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?",
+    "category": "navn",
+    "createdAt": "2026-09-27T19:03:37.791Z"
+  },
+  {
+    "type": "question",
+    "text": "hvor bor du",
+    "createdAt": "2026-09-27T19:03:42.174Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick.",
+    "category": "bosted",
+    "createdAt": "2026-09-27T19:03:42.174Z"
+  },
+  {
+    "type": "question",
+    "text": "lala",
+    "createdAt": "2026-09-27T19:03:45.305Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "createdAt": "2026-09-27T19:03:45.305Z"
+  }
+]
