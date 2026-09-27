@@ -37,4 +37,6 @@ questionForm.addEventListener("submit", async (event) => {
 
     displayMessage(data.userMessage);
     displayMessage(data.botMessage);
+
+    questionInput.value = "";
 });

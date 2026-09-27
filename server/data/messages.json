@@ -559,5 +559,16 @@
     "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick.",
     "category": "bosted",
     "createdAt": "2026-09-27T18:41:16.494Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvad er du bange for?",
+    "createdAt": "2026-09-27T18:46:27.167Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg er mega bange for hajer, men besluttede som barn at jeg måtte kunne lære mig ud af frygten, for den er jo irrationel. Så jeg begyndte at læse og se enormt mange dokumentarer om hajer, hvilket blot har resulteret i at jeg nu er enormt facineret af og ved meget om dem,  men er stadig irrationelt bange for dem. Så man kan sige det ikke hjalp så meget!",
+    "category": "frygter",
+    "createdAt": "2026-09-27T18:46:27.167Z"
   }
 ]
