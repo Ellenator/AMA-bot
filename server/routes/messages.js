@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
 router.delete("/", async (req, res) => {
   await saveMessages([]);
 
-  res.send();
+  res.status(204).end();
 });
 
 export default router;

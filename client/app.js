@@ -50,6 +50,11 @@ questionForm.addEventListener("submit", async (event) => {
 });
 
 clearMessagesButton.addEventListener("click", async () => {
-  await fetch(`${API_URL}/messages`, { method: "DELETE" });
-  messagesContainer.innerHTML = ""
+  const response = await fetch(`${API_URL}/messages`, { method: "DELETE" });
+  
+  if (response.ok) {
+  messagesContainer.innerHTML = "";
+  } else {
+    console.error("Fejl ved sletning af beskeder", response.status);
+  }
 });
