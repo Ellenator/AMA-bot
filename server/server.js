@@ -12,10 +12,8 @@ app.use("/messages", messagesRouter);
 app.use("/answers", answersRouter);
 
 const topicStats = {
-    navn: 0,
-    bosted: 0,
-    hobbier: 0,
-    frygter: 0
+    personlighed: 0,
+    praktisk: 0
 };
 
 app.listen(port, () => {

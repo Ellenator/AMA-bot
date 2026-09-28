@@ -1,6 +1,6 @@
 [
   {
-    "category": "navn",
+    "category": "praktisk",
     "keywords": [
       "navn",
       "hedder",
@@ -9,7 +9,7 @@
     "answer": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?"
   },
   {
-    "category": "bosted",
+    "category": "praktisk",
     "keywords": [
       "bor",
       "by",
@@ -18,16 +18,7 @@
     "answer": "Jeg bor inde i Aarhus by sammen med min kæreste Nick."
   },
   {
-    "category": "hobbier",
-    "keywords": [
-      "fritid",
-      "hobby",
-      "kan lide"
-    ],
-    "answer": "I min fritid kan jeg godt lide at styrketræne, løbe, lave mad, bage lækker kage og brød og meget andet"
-  },
-  {
-    "category": "hobbier",
+    "category": "personlighed",
     "keywords": [
       "hobby",
       "hobbier",
