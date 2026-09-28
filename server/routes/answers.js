@@ -36,11 +36,19 @@ router.put("/:category", async (req, res) => {
   const answers = await loadAnswers();
   const answerRule = answers.find((a) => a.category === req.params.category);
 
-  answerRule.keywords = req.body.keywords;
-  answerRule.answer = req.body.answer;
+  if (!answerRule) {
+    return res.status(404).json({ error: "Kategorien du søger blev ikke fundet" });
+  }
+
+  // Opdaterer værdierne (bevarer eksisterende hvis et felt ikke er sendt med)
+  if (req.body.keywords) answerRule.keywords = req.body.keywords;
+  if (req.body.answer) answerRule.answer = req.body.answer;
+
+  //answerRule.keywords = req.body.keywords;
+  //answerRule.answer = req.body.answer;
   await saveAnswers(answers);
 
-  res.json(answerRule);
+  res.status(200).json(answerRule);
 });
 
 router.delete("/:category", async (req, res) => {
