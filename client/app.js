@@ -29,16 +29,22 @@ questionForm.addEventListener("submit", async (event) => {
 
     const question = questionInput.value.trim();
 
+    if (!question) return; //ny ift. fejlhåndtering
+
     const response = await fetch(`${API_URL}/messages`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question })
     });
 
-    const data = await response.json();
+    if (response.ok) {
+      const [userMessage, botMessage] = await response.json();
 
-    displayMessage(data.userMessage);
-    displayMessage(data.botMessage);
+      displayMessage(userMessage);
+      displayMessage(botMessage);
+    }
+
+    //const data = await response.json(); -> udkommenteret ift. fejlhåndtering
 
     questionInput.value = "";
 });

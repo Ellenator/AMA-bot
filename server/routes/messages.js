@@ -12,13 +12,13 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  if (!req.body.question || !req.body.question.trim()) {
-    res.json({ error: "Skriv et spørgsmål, før du sender." });
-    return;
-  }
-
   const messages = await loadMessages();
   const answers = await loadAnswers();
+
+  if (!req.body.question || !req.body.question.trim()) {
+    res.status(400).json({ error: "Skriv et spørgsmål før du sender" });
+    return;
+  }
 
   const userMessage = {
     type: req.body.type || "question",
@@ -29,17 +29,17 @@ router.post("/", async (req, res) => {
   messages.push(userMessage);
   
   const bestAnswerObj = findBestAnswer(userMessage.text, answers);
-
   const botMessage = {
     type: "answer",
     text: bestAnswerObj.answer,
     category: bestAnswerObj.category,
     createdAt: new Date().toISOString()
   };
+
   messages.push(botMessage);
   await saveMessages(messages);
   
-  res.json({ userMessage, botMessage });
+  res.status(201).json([userMessage, botMessage]);
 });
 
 router.delete("/", async (req, res) => {
