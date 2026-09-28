@@ -45,6 +45,14 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:category", async (req, res) => {
+  const { keywords, answer } = req.body;
+
+  if (!answer || typeof answer !== "string" || !answer.trim() || !Array.isArray(keywords) || keywords.length === 0) {
+    return res.status(400).json({
+      error: "Både 'answer' (tekst) og 'keywords' (array) skal udfyldes ved opdatering"
+    });
+  }
+
   const answers = await loadAnswers();
   const answerRule = answers.find((a) => a.category === req.params.category);
 
@@ -52,12 +60,11 @@ router.put("/:category", async (req, res) => {
     return res.status(404).json({ error: "Kategorien du søger blev ikke fundet" });
   }
 
-  // Opdaterer værdierne (bevarer eksisterende hvis et felt ikke er sendt med)
-  if (req.body.keywords) answerRule.keywords = req.body.keywords;
-  if (req.body.answer) answerRule.answer = req.body.answer;
 
-  //answerRule.keywords = req.body.keywords;
-  //answerRule.answer = req.body.answer;
+
+  answerRule.keywords = keywords;
+  answerRule.answer = answer.trim();
+  
   await saveAnswers(answers);
 
   res.status(200).json(answerRule);

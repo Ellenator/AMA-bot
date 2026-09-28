@@ -15,7 +15,7 @@
       "by",
       "fra"
     ],
-    "answer": "Jeg bor inde i Aarhus by sammen med min kæreste Nick."
+    "answer": "Jeg bor inde i Aarhus by sammen med min kæreste Nick. Lige ved siden af Salling på Amaliegade"
   },
   {
     "category": "personlighed",
@@ -47,5 +47,15 @@
       "år"
     ],
     "answer": "Jeg er født d. 29 marts år 2000 - et ægte nullerbarn. Så hvis jeg dag ikke kan huske hvor gammel jeg er, er den vist helt gal"
+},
+  {
+    "category": "personlighed",
+    "keywords": [
+      "frygt",
+      "bange",
+      "fobi",
+      "fobier"
+    ],
+    "answer": "Jeg er mega bange for hajer og har altid været det! Som barn besluttede jeg at 'logikke' mig ud af frygten ved at lære en masse om dem - fordi realiten for et hajangreb i DK er nærmest utænkelig. Det resulterede i at frygten blev, men at jeg også blev meget facineret af dem. Så nu er jeg både enormt bange for hajer, men også ret klog på dem."
   }
 ]
