@@ -52,12 +52,23 @@ router.put("/:category", async (req, res) => {
 });
 
 router.delete("/:category", async (req, res) => {
-  const answers = await loadAnswers();
-  const updatedAnswers = answers.filter((a) => a.category !== req.params.category);
+  try {
+    const answers = await loadAnswers();
+    const exists = answers.some((a) => a.category.toLowerCase() === req.params.category.toLocaleLowerCase());
+    
+    if (!exists) {
+      return res.status(404).json({ error: "Kategorien du prøver at slette findes ikke" });
+    }
 
-  await saveAnswers(updatedAnswers);
+    const updatedAnswers = answers.filter((a) => a.category !== req.params.category);
+    await saveAnswers(updatedAnswers);
 
-  res.send();
+    res.status(200).json({ message: `Kategorien '${req.params.category}' blev slettet` });
+
+  } catch (error) {
+    console.error("Fejl ved sletning af kategori:", error);
+    res.status(500).json({ error: "Der opstod en serverfejl under sletningen" });
+  }
 });
 
 export default router;
