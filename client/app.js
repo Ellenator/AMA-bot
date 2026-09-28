@@ -29,7 +29,7 @@ questionForm.addEventListener("submit", async (event) => {
 
     const question = questionInput.value.trim();
 
-    if (!question) return; //ny ift. fejlhåndtering
+    if (!question) return;
 
     const response = await fetch(`${API_URL}/messages`, {
         method: "POST",
@@ -43,8 +43,6 @@ questionForm.addEventListener("submit", async (event) => {
       displayMessage(userMessage);
       displayMessage(botMessage);
     }
-
-    //const data = await response.json(); -> udkommenteret ift. fejlhåndtering
 
     questionInput.value = "";
 });

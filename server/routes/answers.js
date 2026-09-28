@@ -19,6 +19,7 @@ router.get("/:category", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const answers = await loadAnswers();
+
   const newAnswerRule = {
     category: req.body.category,
     keywords: req.body.keywords,
@@ -28,7 +29,7 @@ router.post("/", async (req, res) => {
   answers.push(newAnswerRule);
   await saveAnswers(answers);
 
-  res.json(newAnswerRule);
+  res.status(201).json(newAnswerRule);
 });
 
 router.put("/:category", async (req, res) => {
