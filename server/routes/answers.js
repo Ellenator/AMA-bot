@@ -18,12 +18,24 @@ router.get("/:category", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+  const { category, keywords, answer } = req.body;
+
+  if (
+    !category || typeof category !== "string" || !category.trim() ||
+    !answer || typeof answer !== "string" || !answer.trim() ||
+    !Array.isArray(keywords) || keywords.length === 0
+  ) {
+    return res.status(400).json({
+      error: "Udfyld alle felter: category (tekst), answer (tekst) og keywords (array)"
+    });
+  }
+
   const answers = await loadAnswers();
 
   const newAnswerRule = {
-    category: req.body.category,
-    keywords: req.body.keywords,
-    answer: req.body.answer
+    category: category.trim(),
+    keywords: keywords,
+    answer: answer.trim()
   };
 
   answers.push(newAnswerRule);
