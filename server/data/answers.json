@@ -7,7 +7,7 @@
       "hedder",
       "hvem er du"
     ],
-    "answer": "Jeg hedder Ellen, men er også kendt som The Ellenator"
+    "answer": "Jeg hedder Ellen Magna Schwartz Moselund, men er også kendt som The Ellenator i nogle kredse"
   },
   {
     "id": 2,
@@ -89,6 +89,16 @@
     "answer": "Halli hallo med dig! hvad vil du gerne vide mere om?"
   },
   {
+    "id": 8,
+    "category": "personlighed",
+    "keywords": [
+      "nick",
+      "kæreste",
+      "single"
+    ],
+    "answer": "Jeg har en kæreste og han hedder Nikolas Kantsaporidis. Han er halvt græsk og halvt dansk. Han bliver kladt for Nick af de fleste."
+  },
+  {
     "id": 99,
     "category": "hjælp",
     "keywords": [
@@ -100,9 +110,12 @@
     ],
     "answer": "Her er nogle ting, du kan spørge mig om:",
     "options": [
-      "Hvor høj er du?",
+      "Hvad hedder du?",
+      "Hvor gammel er du?",
+      "Hvor bor du?",
+      "Har du en kæreste?",
       "Hvad laver du i din fritid?",
-      "Hvor bor du?"
+      "Hvad er du bange for?"
     ]
   }
 ]

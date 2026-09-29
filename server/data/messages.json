@@ -2,19 +2,7 @@
   {
     "type": "question",
     "text": "hjælp",
-    "createdAt": "2026-09-29T19:04:54.079Z"
-  },
-  {
-    "type": "answer",
-    "text": "Her er nogle ting, du kan spørge mig om:",
-    "category": "hjælp",
-    "answerId": 99,
-    "createdAt": "2026-09-29T19:04:54.079Z"
-  },
-  {
-    "type": "question",
-    "text": "hjælp",
-    "createdAt": "2026-09-29T19:20:33.970Z"
+    "createdAt": "2026-09-29T20:03:51.189Z"
   },
   {
     "type": "answer",
@@ -22,49 +10,26 @@
     "category": "hjælp",
     "answerId": 99,
     "options": [
-      "Hvor høj er du?",
+      "Hvad hedder du?",
+      "Hvor gammel er du?",
+      "Hvor bor du?",
+      "Har du en kæreste?",
       "Hvad laver du i din fritid?",
-      "Hvor bor du?"
+      "Hvad er du bange for?"
     ],
-    "createdAt": "2026-09-29T19:20:33.970Z"
+    "createdAt": "2026-09-29T20:03:51.189Z"
   },
   {
     "type": "question",
-    "text": "Hvor bor du?",
-    "createdAt": "2026-09-29T19:47:02.501Z"
+    "text": "Hvad hedder du?",
+    "createdAt": "2026-09-29T20:04:08.678Z"
   },
   {
     "type": "answer",
-    "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick. Lige ved siden af Salling på Amaliegade",
+    "text": "Jeg hedder Ellen Magna Schwartz Moselund, men er også kendt som The Ellenator i nogle kredse",
     "category": "praktisk",
-    "answerId": 2,
+    "answerId": 1,
     "options": [],
-    "createdAt": "2026-09-29T19:47:02.501Z"
-  },
-  {
-    "type": "question",
-    "text": "Hvad laver du i din fritid?",
-    "createdAt": "2026-09-29T19:47:04.703Z"
-  },
-  {
-    "type": "answer",
-    "text": "I min fritid bruger jeg meget tid på sport - især styrketræning fylder meget. Jeg styrketræner tre gange i ugen og løber ligeledes 2-3 gange ugentligt. Ellers er jeg også meget kreativ og har altid diverse kreaprojekter i gang - om det er hækling, ler eller noget helt tredje vides aldrig. Jeg kan ikke mindst også godt lide at bage og lave mad",
-    "category": "personlighed",
-    "answerId": 3,
-    "options": [],
-    "createdAt": "2026-09-29T19:47:04.703Z"
-  },
-  {
-    "type": "question",
-    "text": "Hvor høj er du?",
-    "createdAt": "2026-09-29T19:47:06.731Z"
-  },
-  {
-    "type": "answer",
-    "text": "Jeg er 171cm høj",
-    "category": "praktisk",
-    "answerId": 6,
-    "options": [],
-    "createdAt": "2026-09-29T19:47:06.731Z"
+    "createdAt": "2026-09-29T20:04:08.678Z"
   }
 ]
