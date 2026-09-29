@@ -71,5 +71,21 @@
       "højde"
     ],
     "answer": "Jeg er 171cm høj"
+  },
+  {
+    "id": 7,
+    "category": "praktisk",
+    "keywords": [
+      "Hej",
+      "Hejsa",
+      "hello",
+      "Hyggehejsa",
+      "Hallo",
+      "hey",
+      "what's up",
+      "Ey",
+      "Whattup"
+    ],
+    "answer": "Halli hallo med dig! hvad vil du gerne vide mere om?"
   }
 ]
