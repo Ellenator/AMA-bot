@@ -54,7 +54,7 @@ main::before {
   background-position: center;
   transform: translate(-50%, -50%) rotate(0deg);
   pointer-events: none;
-  transition: transform 4s ease-in-out;
+  transition: transform 2s ease-in-out;
   z-index: 1;
 }
 
@@ -72,17 +72,17 @@ main::after {
   background-position: center;
   transform: translate(50%, -50%) rotate(0deg);
   pointer-events: none;
-  transition: transform 4s ease-in-out;
+  transition: transform 2s ease-in-out;
   z-index: 1;
 }
 
 /* Animation for solsikker (den ene med uret, den anden mod uret) */
 main.spin::before {
-  animation: spinLeftGear 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: spinLeftGear 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 main.spin::after {
-  animation: spinRightGear 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: spinRightGear 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 @keyframes spinLeftGear {
@@ -128,10 +128,11 @@ main.spin::after {
   overflow: hidden;
 }
 
+
 /* Containeren der holder alle beskederne samlet */
 .chat-messages {
   flex: 1;
-  min-height: 0; /* Hindrer kassen i at vokse ud af .chat */
+  min-height: 0;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -323,9 +324,8 @@ button:hover {
   text-decoration: 1px underline;
 }
 
-/* RESPONSIVT LAYOUT TIL MOBIL / SMÅ SKÆRME */
+/* RESPONSIVT LAYOUT TIL MOBIL / SMÅ SKÆRME - skjuler solsikker */
 @media (max-width: 1400px) {
-  /* Skjuler solsikkerne helt, når skærmen bliver for smal til at have dem i siderne */
   main::before,
   main::after {
     display: none;
