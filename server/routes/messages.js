@@ -5,6 +5,16 @@ import { loadAnswers } from "../data/answers.js";
 
 const router = express.Router();
 
+//hjælpefuntion til at forhindre XSS angreb
+function escapeHtml(text) {
+  return text
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
 router.get("/", async (req, res) => {
   const messages = await loadMessages();
 
@@ -22,16 +32,17 @@ router.post("/", async (req, res) => {
 
   const userMessage = {
     type: req.body.type || "question",
-    text: req.body.question.trim(),
+    text: escapeHtml(req.body.question.trim()),
     createdAt: new Date().toISOString()
   };
 
   messages.push(userMessage);
   
   const bestAnswerObj = findBestAnswer(userMessage.text, answers);
+
   const botMessage = {
     type: "answer",
-    text: bestAnswerObj.answer,
+    text: escapeHtml(bestAnswerObj.answer),
     category: bestAnswerObj.category,
     createdAt: new Date().toISOString()
   };
