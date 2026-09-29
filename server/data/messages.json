@@ -2,61 +2,61 @@
   {
     "type": "question",
     "text": "hej",
-    "createdAt": "2026-09-29T13:06:25.382Z"
-  },
-  {
-    "type": "answer",
-    "text": "Det kender jeg desværre ikke svaret på endnu.",
-    "category": "",
-    "answerId": null,
-    "createdAt": "2026-09-29T13:06:25.382Z"
-  },
-  {
-    "type": "question",
-    "text": "Hej",
-    "createdAt": "2026-09-29T13:06:28.580Z"
-  },
-  {
-    "type": "answer",
-    "text": "Det kender jeg desværre ikke svaret på endnu.",
-    "category": "",
-    "answerId": null,
-    "createdAt": "2026-09-29T13:06:28.580Z"
-  },
-  {
-    "type": "question",
-    "text": "hvor høj er du?",
-    "createdAt": "2026-09-29T13:07:23.288Z"
-  },
-  {
-    "type": "answer",
-    "text": "Jeg er 171cm høj",
-    "category": "praktisk",
-    "answerId": 6,
-    "createdAt": "2026-09-29T13:07:23.288Z"
-  },
-  {
-    "type": "question",
-    "text": "hej",
-    "createdAt": "2026-09-29T13:09:39.117Z"
+    "createdAt": "2026-09-29T16:55:08.897Z"
   },
   {
     "type": "answer",
     "text": "Halli hallo med dig! hvad vil du gerne vide mere om?",
     "category": "praktisk",
     "answerId": 7,
-    "createdAt": "2026-09-29T13:09:39.117Z"
+    "createdAt": "2026-09-29T16:55:08.898Z"
   },
   {
     "type": "question",
-    "text": "Hvem er du?",
-    "createdAt": "2026-09-29T13:09:43.973Z"
+    "text": "hvad laver du?",
+    "createdAt": "2026-09-29T16:59:30.147Z"
   },
   {
     "type": "answer",
-    "text": "Jeg hedder Ellen, men er også kendt som The Ellenator",
+    "text": "I  min fritid bruger jeg meget tid på sport - især styrketræning fylder meget. Jeg styrketræner tre gange i ugen og løber ligeledes 2-3 gange ugentligt. Ellers er jeg også meget kreativ og har altid diverse kreaprojekter i gang - om det er hækling, ler eller noget helt tredje vides aldrig. Jeg kan ikke mindst også godt lide at bage og lave mad",
+    "category": "personlighed",
+    "answerId": 3,
+    "createdAt": "2026-09-29T16:59:30.147Z"
+  },
+  {
+    "type": "question",
+    "text": "hvor er du fra?",
+    "createdAt": "2026-09-29T16:59:47.575Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg bor inde i Aarhus by sammen med min kæreste Nick. Lige ved siden af Salling på Amaliegade",
     "category": "praktisk",
-    "answerId": 1,
-    "createdAt": "2026-09-29T13:09:43.973Z"
+    "answerId": 2,
+    "createdAt": "2026-09-29T16:59:47.575Z"
+  },
+  {
+    "type": "question",
+    "text": "hvem er nick?",
+    "createdAt": "2026-09-29T17:00:06.934Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "answerId": null,
+    "createdAt": "2026-09-29T17:00:06.934Z"
+  },
+  {
+    "type": "question",
+    "text": "fortæl om dig selv",
+    "createdAt": "2026-09-29T17:00:17.118Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "answerId": null,
+    "createdAt": "2026-09-29T17:00:17.118Z"
   }
 ]
