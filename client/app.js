@@ -2,7 +2,17 @@ const messagesContainer = document.querySelector("#messages");
 const questionForm = document.querySelector("#question-form");
 const questionInput = document.querySelector("#question");
 const clearMessagesButton = document.querySelector("#clear-messages-button");
+const mainContainer = document.querySelector("main");
 const API_URL = "http://localhost:3000";
+
+// Hjælpefunktion til at starte solsikkernes rotation
+function triggerSunflowerSpin() {
+  if (mainContainer) {
+    mainContainer.classList.remove("spin");
+    void mainContainer.offsetWidth;
+    mainContainer.classList.add("spin");
+  }
+}
 
 function displayMessage(message) {
   let html = /*html*/ `
@@ -24,7 +34,7 @@ function displayMessage(message) {
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
-//evenntlistener der fanger klik på option knapperne
+// Eventlistener der fanger klik på option knapperne
 messagesContainer.addEventListener("click", (event) => {
   if (event.target.classList.contains("option-btn")) {
     const selectedQuestion = event.target.textContent;
@@ -34,7 +44,7 @@ messagesContainer.addEventListener("click", (event) => {
   }
 });
 
-//hjælpefuntion til visning af visuelle fejl i chatten
+// Hjælpefunktion til visning af visuelle fejl i chatten
 function displayErrorMessage(errorText) {
   const html = /*html*/ `
   <article class="error-message">
@@ -62,9 +72,9 @@ async function getMessages() {
     for (const message of messages) {
         displayMessage(message);
     }
-} catch (error) {
-  console.error("Fejl i getMessages:", error);
-  displayErrorMessage("Kunne ikke forbinde til serveren for at hente beskeder");
+  } catch (error) {
+    console.error("Fejl i getMessages:", error);
+    displayErrorMessage("Kunne ikke forbinde til serveren for at hente beskeder");
   }
 }
 
@@ -76,30 +86,33 @@ questionForm.addEventListener("submit", async (event) => {
     const question = questionInput.value.trim();
     if (!question) return;
 
+    // Starter solsikkernes rotation ved afsendelse
+    triggerSunflowerSpin();
+
     try {
       if (!navigator.onLine) {
         throw new Error("Ingen internet forbindelse");
       }
 
-    const response = await fetch(`${API_URL}/messages`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question })
-    });
+      const response = await fetch(`${API_URL}/messages`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question })
+      });
 
-    if (!response.ok) {
-      throw new Error(`Serverfejl ved afsendelse (Status ${response.status})`);
-    }
+      if (!response.ok) {
+        throw new Error(`Serverfejl ved afsendelse (Status ${response.status})`);
+      }
 
-    const [userMessage, botMessage] = await response.json();
+      const [userMessage, botMessage] = await response.json();
 
-    displayMessage(userMessage);
-    displayMessage(botMessage);
+      displayMessage(userMessage);
+      displayMessage(botMessage);
 
-  questionInput.value = "";
-} catch (error) {
-  console.error("Fejl ved afsendelse af besked:", error);
-  displayErrorMessage("Der op en fejl. Kunne ikke sende din besked. Tjek din forbindelse eller at serveren kører");
+      questionInput.value = "";
+  } catch (error) {
+    console.error("Fejl ved afsendelse af besked:", error);
+    displayErrorMessage("Der opstod en fejl. Kunne ikke sende din besked. Tjek din forbindelse eller at serveren kører");
   }
 });
 
@@ -109,14 +122,14 @@ clearMessagesButton.addEventListener("click", async () => {
       throw new Error("Ingen internetforbindelse");
     }
 
-  const response = await fetch(`${API_URL}/messages`, { method: "DELETE" });
+    const response = await fetch(`${API_URL}/messages`, { method: "DELETE" });
   
-  if (response.ok) {
-  messagesContainer.innerHTML = "";
-  } else {
-    throw new Error(`Fejl ved sletning (Status ${response.status})`);
-  }
-} catch (error) {
+    if (response.ok) {
+      messagesContainer.innerHTML = "";
+    } else {
+      throw new Error(`Fejl ved sletning (Status ${response.status})`);
+    }
+  } catch (error) {
     console.error("Fejl ved rydning af chat", error);
     displayErrorMessage("Kunne ikke rydde chatten i øjeblikket");
   }

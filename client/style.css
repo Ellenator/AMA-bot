@@ -2,17 +2,16 @@
 
 /* Typografi - henter fonter fra Google */
 @import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Manrope:wght@200..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Farver */
 :root {
-  --bige: #FFFBF0;
+  --beige: #FFFBF0;
   --gul: #FFD131;
   --orange: #ff9505;
   --roed: #bc3908;
   --brun: #220901;
-  --overskrifter: 'chonburi', sans-serif;
-  --broedtekst: 'manrope', sans-serif;
+  --overskrifter: 'Chonburi', sans-serif;
+  --broedtekst: 'Manrope', sans-serif;
 }
 
 html, body {
@@ -25,7 +24,7 @@ html, body {
 body {
   font-family: var(--broedtekst);
   color: var(--roed);
-  background-color: var(--bige);
+  background-color: var(--beige);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -33,57 +32,92 @@ body {
 
 main {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   height: 100vh;
-  padding: 10px;
-  gap: 10px;
+  padding: 15px;
   box-sizing: border-box;
+  position: relative;
+  overflow: hidden; /* Skærer solsikkerne over midt over ved skærmkanten */
 }
 
-/* PROFIL STYLING */
-.profil {
-  background-image: url('/IMG/sommermig.JPG');
-  background-size: cover;
-  background-position: center;
+/* Venstre halverede solsikke */
+main::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 700px;
+  height: 700px;
+  background-image: url('/IMG/sunflower-5228111_960_720.png');
+  background-size: contain;
   background-repeat: no-repeat;
-  flex: 1;
-  min-width: 320px;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 10px;
-  box-sizing: border-box;
+  background-position: center;
+  transform: translate(-50%, -50%) rotate(0deg);
+  pointer-events: none;
+  transition: transform 4s ease-in-out;
+  z-index: 1;
 }
 
-.profil h2 {
-  font-family: var(--overskrifter);
-  color: var(--brun);
-  font-size: 3rem;
-  max-width: 90%;
-  margin-left: 5vw;
-  padding-top: 1vh;
+/* Højre halverede solsikke */
+main::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 700px;
+  height: 700px;
+  background-image: url('/IMG/sunflower-5228111_960_720.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(50%, -50%) rotate(0deg);
+  pointer-events: none;
+  transition: transform 4s ease-in-out;
+  z-index: 1;
 }
 
-.profil p {
-  color: var(--brun);
-  font-size: 1rem;
-  margin-left: 5.5vw;
-  margin-top: -40px;
-  font-weight: 500;
+/* Animation for solsikker (den ene med uret, den anden mod uret) */
+main.spin::before {
+  animation: spinLeftGear 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+main.spin::after {
+  animation: spinRightGear 4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes spinLeftGear {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(400deg);
+  }
+}
+
+@keyframes spinRightGear {
+  0% {
+    transform: translate(50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(50%, -50%) rotate(-400deg);
+  }
 }
 
 /* CHAT STYLING */
 .chat {
   flex: 1;
-  min-width: 320px;
+  min-height: 0;
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
   border-radius: 10px;
   border: 2px solid var(--roed);
-  height: 100%;
   background-image: 
     linear-gradient(rgba(255, 251, 240, 0.7), rgba(255, 251, 240, 0.7)), 
     url('/IMG/logoPortfolioGul.png');
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2.5vw;
+  padding: 20px;
   background-origin: content-box;
   background-size: contain;
   display: flex;
@@ -91,11 +125,13 @@ main {
   justify-content: space-between;
   box-sizing: border-box;
   position: relative;
+  overflow: hidden;
 }
 
 /* Containeren der holder alle beskederne samlet */
 .chat-messages {
   flex: 1;
+  min-height: 0; /* Hindrer kassen i at vokse ud af .chat */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -126,7 +162,7 @@ form {
   height: 50px;
   font-family: var(--broedtekst);
   font-size: 1rem;
-  background-color: var(--bige);
+  background-color: var(--beige);
   color: var(--roed);
   padding-left: 12px;
   box-sizing: border-box;
@@ -148,7 +184,7 @@ form {
 }
 
 button {
-  color: var(--bige);
+  color: var(--beige);
   background-color: var(--roed);
   border: none;
   border-radius: 10px;
@@ -178,7 +214,7 @@ button:hover {
   font-family: var(--broedtekst);
   padding: 10px 15px 10px 15px;
   border-radius: 20px 20px 20px 0px;
-  color: var(--bige);
+  color: var(--beige);
   max-width: 80%;
   align-self: flex-start;
 }
@@ -189,7 +225,7 @@ button:hover {
   font-family: var(--broedtekst);
   padding: 10px 15px 10px 15px;
   border-radius: 20px 20px 0px 20px;
-  color: var(--bige);
+  color: var(--beige);
   max-width: 80%;
   align-self: flex-end;
 }
@@ -205,44 +241,14 @@ button:hover {
   }
 
   main {
-    flex-direction: column;
     padding: 10px;
-    gap: 10px;
     height: 100vh;
-  }
-
-  .profil, .chat {
-    width: 100%;
-    min-width: unset;
-    height: calc(50vh - 15px);
-  }
-
-  /* Centrerer indholdet i profilkassen */
-  .profil {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* Nulstiller margener så centreringen rammer præcist */
-  .profil h2 {
-    font-size: 2.5rem;
-    max-width: 100%;
-    margin-left: 0;
-    padding-top: 0;
-  }
-
-  .profil p {
-    font-size: 80%;
-    margin-left: 0;
-    margin-top: -35px;
   }
 }
 
 /* Error styling */
 .error-message {
-  background-color: var(--bige);
+  background-color: var(--beige);
   color: var(--roed);
   border: 2px dashed var(--roed);
   text-align: center;
@@ -290,7 +296,7 @@ button:hover {
   background-color: var(--orange);
   border: none;
   padding: 2px 0;
-  color: var(--bige);
+  color: var(--beige);
   font-size: 1rem;
   cursor: pointer;
   font-family: var(--broedtekst);
@@ -305,7 +311,7 @@ button:hover {
   content: "•";
   margin-right: 8px;
   font-size: 1rem;
-  color: var(--bige);
+  color: var(--beige);
 }
 
 .option-btn:hover::before {
@@ -315,4 +321,13 @@ button:hover {
 .option-btn:hover {
   background: none;
   text-decoration: 1px underline;
+}
+
+/* RESPONSIVT LAYOUT TIL MOBIL / SMÅ SKÆRME */
+@media (max-width: 1400px) {
+  /* Skjuler solsikkerne helt, når skærmen bliver for smal til at have dem i siderne */
+  main::before,
+  main::after {
+    display: none;
+  }
 }
