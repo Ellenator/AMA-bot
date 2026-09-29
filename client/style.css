@@ -156,7 +156,7 @@ button {
   padding: 10px 15px;
   white-space: nowrap;
   
-  /* Centrerer teksten perfekt i knappen */
+  /* Centrerer teksten i knapper */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,23 +196,6 @@ button:hover {
 
 .question p, .answer p {
   margin: 0;
-}
-
-/* FEJLBESKED STYLING */
-.chat {
-  position: relative;
-}
-
-p[role="alert"] {
-  position: absolute;
-  bottom: 12px;
-  left: 50px;
-  margin: 0;
-  font-size: 0.8rem;
-  color: var(--roed);
-  font-weight: 700;
-  pointer-events: none;
-  font-family: var(--broedtekst);
 }
 
 /* RESPONSIVT LAYOUT TIL MOBIL / SMÅ SKÆRME */
@@ -255,36 +238,6 @@ p[role="alert"] {
     margin-left: 0;
     margin-top: -35px;
   }
-}
-
-/* Styling af categori optælling */
-.chat h2 {
-  font-family: var(--overskrifter);
-  font-size: 0.8rem;
-  color: var(--roed);
-  margin: 10px 0 5px 0;
-  font-family: var(--broedtekst);
-}
-
-/* Listen der indeholder kategorierne */
-.chat ul {
-  display: flex;
-  gap: 10px;               
-  padding: 0;              
-  list-style: none;
-  margin: 0 0 15px 0;      
-  flex-wrap: wrap;
-  font-weight: 700;
-}
-
-/* De enkelte kasser/kategorier */
-.chat ul li {
-  background-color: var(--bige);
-  border: 2px solid var(--roed);
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 0.8rem;
-  color: var(--roed);
 }
 
 /* Error styling */
