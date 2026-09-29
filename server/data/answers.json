@@ -1,14 +1,16 @@
 [
   {
+    "id": 1,
     "category": "praktisk",
     "keywords": [
       "navn",
       "hedder",
       "hvem er du"
     ],
-    "answer": "Jeg hedder Ellen, men er også kendt som Ellenator i sjove sammenhænge. Hvilke facts vil du ellers vide om mig?"
+    "answer": "Jeg hedder Ellen, men er også kendt som The Ellenator"
   },
   {
+    "id": 2,
     "category": "praktisk",
     "keywords": [
       "bor",
@@ -18,6 +20,7 @@
     "answer": "Jeg bor inde i Aarhus by sammen med min kæreste Nick. Lige ved siden af Salling på Amaliegade"
   },
   {
+    "id": 3,
     "category": "personlighed",
     "keywords": [
       "hobby",
@@ -40,6 +43,7 @@
     "answer": "I  min fritid bruger jeg meget tid på sport - især styrketræning fylder meget. Jeg styrketræner tre gange i ugen og løber ligeledes 2-3 gange ugentligt. Ellers er jeg også meget kreativ og har altid diverse kreaprojekter i gang - om det er hækling, ler eller noget helt tredje vides aldrig. Jeg kan ikke mindst også godt lide at bage og lave mad"
   },
   {
+    "id": 4,
     "category": "praktisk",
     "keywords": [
       "gammel",
@@ -49,6 +53,7 @@
     "answer": "Jeg er født d. 29 marts år 2000 - et ægte nullerbarn. Så hvis jeg dag ikke kan huske hvor gammel jeg er, er den vist helt gal"
   },
   {
+    "id": 5,
     "category": "personlighed",
     "keywords": [
       "frygt",
@@ -57,5 +62,14 @@
       "fobier"
     ],
     "answer": "Jeg er mega bange for hajer og har altid været det! Som barn besluttede jeg at 'logikke' mig ud af frygten ved at lære en masse om dem - fordi realiten for et hajangreb i DK er nærmest utænkelig. Det resulterede i at frygten blev, men at jeg også blev meget facineret af dem. Så nu er jeg både enormt bange for hajer, men også ret klog på dem."
+  },
+  {
+    "id": 6,
+    "category": "praktisk",
+    "keywords": [
+      "høj",
+      "højde"
+    ],
+    "answer": "Jeg er 171cm høj"
   }
 ]
