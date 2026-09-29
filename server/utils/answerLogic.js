@@ -1,9 +1,9 @@
 function countMatches(keywords, normalizedQuestion) {
-    const matches = keywords.filter((keyword) => 
-        normalizedQuestion.includes(keyword.toLowerCase())
-    );
+  const matches = keywords.filter((keyword) => 
+    normalizedQuestion.includes(keyword.toLowerCase())
+  );
 
-    return matches.length
+  return matches.length;
 }
 
 export function findAnswer(question, answers) {
@@ -11,7 +11,8 @@ export function findAnswer(question, answers) {
 
   for (const answerGroup of answers) {
     const hasMatch = answerGroup.keywords.some((keyword) =>
-        normalizedQuestion.includes(keyword));
+      normalizedQuestion.includes(keyword.toLowerCase())
+    );
 
     if (hasMatch) {
       return answerGroup.answer;
@@ -28,20 +29,23 @@ export function findBestAnswer(question, answers) {
   let bestAnswer = "Det kender jeg desværre ikke svaret på endnu.";
   let bestCategory = "";
   let bestId = null;
+  let bestOptions = []; // <-- TILFØJET
 
   for (const answerGroup of answers) {
     const tempScore = countMatches(answerGroup.keywords, normalizedQuestion);
     if (tempScore > bestScore) {
-        bestScore = tempScore;
-        bestAnswer = answerGroup.answer;
-        bestCategory = answerGroup.category; 
-        bestId = answerGroup.id;
+      bestScore = tempScore;
+      bestAnswer = answerGroup.answer;
+      bestCategory = answerGroup.category; 
+      bestId = answerGroup.id;
+      bestOptions = answerGroup.options || [];
     }
   }
 
   return {
     answer: bestAnswer,
     category: bestCategory,
-    id: bestId
+    id: bestId,
+    options: bestOptions
   };
 }

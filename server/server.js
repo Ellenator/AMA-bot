@@ -13,10 +13,10 @@ app.use(cors({ origin: "http://127.0.0.1:5500" }));
 app.use("/messages", messagesRouter);
 app.use("/answers", answersRouter);
 
-const topicStats = {
+/* const topicStats = {
     personlighed: 0,
     praktisk: 0
-};
+}; */
 
 // 404 catch all mddeleware - rammes hvis ingen router gribes
 app.use((req, res) => {

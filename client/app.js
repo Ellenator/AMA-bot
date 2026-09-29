@@ -5,14 +5,34 @@ const clearMessagesButton = document.querySelector("#clear-messages-button");
 const API_URL = "http://localhost:3000";
 
 function displayMessage(message) {
-  const html = /*html*/ `
+  let html = /*html*/ `
     <article class="${message.type}">
-      <p>${message.text}</p>
-    </article>`;
+      <p>${message.text}</p>`;
+
+  // Hvis beskeden har klikbare muligheder/knapper
+  if (message.options && message.options.length > 0) {
+    html += `<div class="options-container">`;
+    for (const option of message.options) {
+      html += `<button type="button" class="option-btn">${option}</button>`;
+    }
+    html += `</div>`;
+  }
+
+  html += `</article>`;
 
   messagesContainer.insertAdjacentHTML("beforeend", html);
   messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
+
+//evenntlistener der fanger klik på option knapperne
+messagesContainer.addEventListener("click", (event) => {
+  if (event.target.classList.contains("option-btn")) {
+    const selectedQuestion = event.target.textContent;
+    
+    questionInput.value = selectedQuestion;
+    questionForm.dispatchEvent(new Event("submit"));
+  }
+});
 
 //hjælpefuntion til visning af visuelle fejl i chatten
 function displayErrorMessage(errorText) {

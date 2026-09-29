@@ -265,3 +265,54 @@ button:hover {
 .error-message p {
   margin: 0;
 }
+
+/* Styling af hjælpe tekst */
+.help-hint {
+  display: block;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--gul);
+  margin-top: 6px;
+  text-align: start;
+  padding-left: 10px;
+}
+
+/* styling af knapper i hjælpesvar */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.option-btn {
+  background-color: var(--orange);
+  border: none;
+  padding: 2px 0;
+  color: var(--bige);
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: var(--broedtekst);
+  height: auto;
+  text-align: left;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.option-btn::before {
+  content: "•";
+  margin-right: 8px;
+  font-size: 1rem;
+  color: var(--bige);
+}
+
+.option-btn:hover::before {
+  text-decoration: 0px underline var(--orange);
+}
+
+.option-btn:hover {
+  background: none;
+  text-decoration: 1px underline;
+}

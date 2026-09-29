@@ -5,7 +5,7 @@ import { loadAnswers } from "../data/answers.js";
 
 const router = express.Router();
 
-//hjælpefuntion til at forhindre XSS angreb
+// Hjælpefunktion til at forhindre XSS angreb
 function escapeHtml(text) {
   return text
     .replaceAll("&", "&amp;")
@@ -37,7 +37,7 @@ router.post("/", async (req, res) => {
   };
 
   messages.push(userMessage);
-  
+
   const bestAnswerObj = findBestAnswer(userMessage.text, answers);
 
   const botMessage = {
@@ -45,12 +45,13 @@ router.post("/", async (req, res) => {
     text: escapeHtml(bestAnswerObj.answer),
     category: bestAnswerObj.category,
     answerId: bestAnswerObj.id,
+    options: bestAnswerObj.options || [], // <-- Sender knapperne med til frontenden!
     createdAt: new Date().toISOString()
   };
 
   messages.push(botMessage);
   await saveMessages(messages);
-  
+
   res.status(201).json([userMessage, botMessage]);
 });
 

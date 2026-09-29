@@ -40,7 +40,7 @@
       "bagning",
       "kage"
     ],
-    "answer": "I  min fritid bruger jeg meget tid på sport - især styrketræning fylder meget. Jeg styrketræner tre gange i ugen og løber ligeledes 2-3 gange ugentligt. Ellers er jeg også meget kreativ og har altid diverse kreaprojekter i gang - om det er hækling, ler eller noget helt tredje vides aldrig. Jeg kan ikke mindst også godt lide at bage og lave mad"
+    "answer": "I min fritid bruger jeg meget tid på sport - især styrketræning fylder meget. Jeg styrketræner tre gange i ugen og løber ligeledes 2-3 gange ugentligt. Ellers er jeg også meget kreativ og har altid diverse kreaprojekter i gang - om det er hækling, ler eller noget helt tredje vides aldrig. Jeg kan ikke mindst også godt lide at bage og lave mad"
   },
   {
     "id": 4,
@@ -76,16 +76,33 @@
     "id": 7,
     "category": "praktisk",
     "keywords": [
-      "Hej",
-      "Hejsa",
+      "hej",
+      "hejsa",
       "hello",
-      "Hyggehejsa",
-      "Hallo",
+      "hyggehejsa",
+      "hallo",
       "hey",
       "what's up",
-      "Ey",
-      "Whattup"
+      "ey",
+      "whattup"
     ],
     "answer": "Halli hallo med dig! hvad vil du gerne vide mere om?"
+  },
+  {
+    "id": 99,
+    "category": "hjælp",
+    "keywords": [
+      "hjælp",
+      "hjelp",
+      "help",
+      "muligheder",
+      "inspiration"
+    ],
+    "answer": "Her er nogle ting, du kan spørge mig om:",
+    "options": [
+      "Hvor høj er du?",
+      "Hvad laver du i din fritid?",
+      "Hvor bor du?"
+    ]
   }
 ]
