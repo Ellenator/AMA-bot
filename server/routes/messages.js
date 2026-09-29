@@ -44,6 +44,7 @@ router.post("/", async (req, res) => {
     type: "answer",
     text: escapeHtml(bestAnswerObj.answer),
     category: bestAnswerObj.category,
+    answerId: bestAnswerObj.id,
     createdAt: new Date().toISOString()
   };
 

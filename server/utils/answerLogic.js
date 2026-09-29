@@ -27,6 +27,7 @@ export function findBestAnswer(question, answers) {
   let bestScore = 0;
   let bestAnswer = "Det kender jeg desværre ikke svaret på endnu.";
   let bestCategory = "";
+  let bestId = null;
 
   for (const answerGroup of answers) {
     const tempScore = countMatches(answerGroup.keywords, normalizedQuestion);
@@ -34,10 +35,13 @@ export function findBestAnswer(question, answers) {
         bestScore = tempScore;
         bestAnswer = answerGroup.answer;
         bestCategory = answerGroup.category; 
+        bestId = answerGroup.id;
     }
   }
+
   return {
     answer: bestAnswer,
-    category: bestCategory
+    category: bestCategory,
+    id: bestId
   };
 }

@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "type": "question",
+    "text": "hej med dig",
+    "createdAt": "2026-09-29T12:57:57.515Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "answerId": null,
+    "createdAt": "2026-09-29T12:57:57.517Z"
+  },
+  {
+    "type": "question",
+    "text": "hvad hedder du?",
+    "createdAt": "2026-09-29T12:58:41.013Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg hedder Ellen, men er også kendt som The Ellenator",
+    "category": "praktisk",
+    "answerId": 1,
+    "createdAt": "2026-09-29T12:58:41.013Z"
+  }
+]
