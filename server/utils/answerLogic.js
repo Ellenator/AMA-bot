@@ -1,6 +1,6 @@
 function countMatches(keywords, normalizedQuestion) {
     const matches = keywords.filter((keyword) => 
-        normalizedQuestion.includes(keyword)
+        normalizedQuestion.includes(keyword.toLowerCase())
     );
 
     return matches.length

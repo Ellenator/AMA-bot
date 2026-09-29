@@ -1,26 +1,62 @@
 [
   {
     "type": "question",
-    "text": "hej med dig",
-    "createdAt": "2026-09-29T12:57:57.515Z"
+    "text": "hej",
+    "createdAt": "2026-09-29T13:06:25.382Z"
   },
   {
     "type": "answer",
     "text": "Det kender jeg desværre ikke svaret på endnu.",
     "category": "",
     "answerId": null,
-    "createdAt": "2026-09-29T12:57:57.517Z"
+    "createdAt": "2026-09-29T13:06:25.382Z"
   },
   {
     "type": "question",
-    "text": "hvad hedder du?",
-    "createdAt": "2026-09-29T12:58:41.013Z"
+    "text": "Hej",
+    "createdAt": "2026-09-29T13:06:28.580Z"
+  },
+  {
+    "type": "answer",
+    "text": "Det kender jeg desværre ikke svaret på endnu.",
+    "category": "",
+    "answerId": null,
+    "createdAt": "2026-09-29T13:06:28.580Z"
+  },
+  {
+    "type": "question",
+    "text": "hvor høj er du?",
+    "createdAt": "2026-09-29T13:07:23.288Z"
+  },
+  {
+    "type": "answer",
+    "text": "Jeg er 171cm høj",
+    "category": "praktisk",
+    "answerId": 6,
+    "createdAt": "2026-09-29T13:07:23.288Z"
+  },
+  {
+    "type": "question",
+    "text": "hej",
+    "createdAt": "2026-09-29T13:09:39.117Z"
+  },
+  {
+    "type": "answer",
+    "text": "Halli hallo med dig! hvad vil du gerne vide mere om?",
+    "category": "praktisk",
+    "answerId": 7,
+    "createdAt": "2026-09-29T13:09:39.117Z"
+  },
+  {
+    "type": "question",
+    "text": "Hvem er du?",
+    "createdAt": "2026-09-29T13:09:43.973Z"
   },
   {
     "type": "answer",
     "text": "Jeg hedder Ellen, men er også kendt som The Ellenator",
     "category": "praktisk",
     "answerId": 1,
-    "createdAt": "2026-09-29T12:58:41.013Z"
+    "createdAt": "2026-09-29T13:09:43.973Z"
   }
 ]
