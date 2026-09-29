@@ -14,6 +14,10 @@ router.get("/:category", async (req, res) => {
   const answers = await loadAnswers();
   const answerRule = answers.find((a) => a.category === req.params.category);
 
+  if (!answerRule) {
+    res.status(404).json({ error: `Kategorien '${req.params.category}' findes ikke`});
+  }
+
   res.json(answerRule);
 });
 
