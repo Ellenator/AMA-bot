@@ -1,8 +1,12 @@
 import fs from "node:fs/promises";
 
 export async function loadMessages() {
-  const data = await fs.readFile("./data/messages.json", "utf8");
-  return JSON.parse(data);
+  try {
+    const data = await fs.readFile("./data/messages.json", "utf8");
+    return JSON.parse(data);
+  } catch (error) {
+    return [];
+  }
 }
 
 export async function saveMessages(messages) {
