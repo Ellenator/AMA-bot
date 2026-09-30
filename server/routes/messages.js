@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
     text: escapeHtml(bestAnswerObj.answer),
     category: bestAnswerObj.category,
     answerId: bestAnswerObj.id,
-    options: bestAnswerObj.options || [], // <-- Sender knapperne med til frontenden!
+    options: bestAnswerObj.options || [],
     createdAt: new Date().toISOString()
   };
 

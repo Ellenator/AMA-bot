@@ -90,7 +90,7 @@ main.spin::after {
     transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(400deg);
+    transform: translate(-50%, -50%) rotate(180deg);
   }
 }
 
@@ -99,7 +99,7 @@ main.spin::after {
     transform: translate(50%, -50%) rotate(0deg);
   }
   100% {
-    transform: translate(50%, -50%) rotate(-400deg);
+    transform: translate(50%, -50%) rotate(-180deg);
   }
 }
 
